@@ -1,0 +1,108 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SocialConnect - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <h1>SocialConnect</h1>
+
+        <nav>
+    <button onclick="showHome()">Home</button>
+    <button onclick="showUsers()">Find Users</button>
+    <button onclick="showProfile()">Profile</button>
+    <button onclick="logout()">Logout</button>
+</nav>
+    </header>
+
+    <main>
+
+        <!-- LOGIN -->
+        <section id="loginSection" class="auth-box">
+            <h2>Welcome Back!</h2>
+
+            <input type="email" id="loginEmail"
+                placeholder="Enter email">
+
+            <input type="password" id="loginPassword"
+                placeholder="Enter password">
+
+            <button onclick="login()">Login</button>
+
+            <p>Don't have an account?
+                <a href="#" onclick="showRegister()">Register</a>
+            </p>
+        </section>
+        <!-- FIND USERS -->
+<section id="usersSection" class="hidden">
+
+    <h2>Discover People</h2>
+
+    <div id="usersContainer"></div>
+
+</section>
+
+        <!-- REGISTER -->
+        <section id="registerSection" class="auth-box hidden">
+            <h2>Create Account</h2>
+
+            <input type="text" id="registerUsername"
+                placeholder="Username">
+
+            <input type="email" id="registerEmail"
+                placeholder="Email">
+
+            <input type="password" id="registerPassword"
+                placeholder="Password">
+
+            <button onclick="register()">Register</button>
+
+            <p>Already have an account?
+                <a href="#" onclick="showLogin()">Login</a>
+            </p>
+        </section>
+
+        <!-- HOME -->
+        <section id="homeSection" class="hidden">
+
+            <div class="create-post">
+                <h2>What's on your mind?</h2>
+
+                <textarea id="postContent"
+                    placeholder="Write something..."></textarea>
+
+                <input type="url" id="postImage"
+                    placeholder="Image URL (optional)">
+
+                <button onclick="createPost()">Publish Post</button>
+            </div>
+
+            <h2>News Feed</h2>
+
+            <div id="postsContainer"></div>
+
+        </section>
+
+        <!-- PROFILE -->
+        <section id="profileSection" class="hidden">
+
+            <h2>My Profile</h2>
+
+            <div id="profileDetails"></div>
+
+            <button onclick="showHome()">Back to Home</button>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
