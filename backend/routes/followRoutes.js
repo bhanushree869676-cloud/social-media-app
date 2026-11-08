@@ -2,7 +2,7 @@
 const express = require("express");
 const router = express.Router();
 
-const User = require("../models/User");
+const User = require("../models/user");
 const authMiddleware = require("../middleware/authMiddleware");
 
 // FOLLOW OR UNFOLLOW USER
